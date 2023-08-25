@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- title of the website -->
+    <title>Modern Apartment</title>
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+
+<body class="wrapper">
+    <!-- This is The Navigation Bar -->
+    <!-- Nav Bar contains a logo, notification button, search icon and a login button-->
+    <section>
+        <nav>
+            <div class="nav-logo">
+                <img src="assignment_2_assets/Group 9739.png" alt="logo" />
+            </div>
+
+            <!-- navigation row that points to each section of the website -->
+            <div class="nav-row">
+                <ul class="nav-row-main">
+                    <li><a href="#home-section">Home</a></li>&nbsp;&nbsp;
+                    <li><a href="#about-section">About</a></li>&nbsp;&nbsp;
+                    <li><a href="#featured-list">Featured</a></li>&nbsp;&nbsp;
+                    <li><a href="#Contact">Contact</a></li>&nbsp;&nbsp;
+                </ul>
+            </div>
+
+            <!-- notification button, search icon and a login button -->
+            <input type="text" class="search-icon" placeholder="Saved Search">
+            <button class="notification-btn" type="button" value="myimage">
+                <img class="notification-img" src="assignment_2_assets/notification-img.png" />
+            </button>
+            <button class="login-btn" type="button">Login</button>
+        </nav>
+    </section>
+
+    <!-- This is the Home section which contains description and a form -->
+    <section class="home-section" id="home-section">
+        <!-- div for the background image present in the Home -->
+        <div class="container">
+            <div><img class="home-image" src="assignment_2_assets/pierre-chatel-innocenti-gxyeia7Syuk-unsplash.png"
+                    alt="">
+            </div>
+            <!-- this div contains the text description present in the Home -->
+            <div class="text-block">
+                <h2><span class="lightblue-text">Let's find</span> <br /><span class="darkblue-text">your
+                        Dream...</span>
+                </h2>
+                <div class="para-block">
+                    <p>Building award winning properties across <br />London UK and all the world</p>
+                </div>
+            </div>
+
+            <!-- Html for the 3 buttons present-->
+            <div class="nav-button-group">
+                <ul class="nav-button-group">
+                    <li><button class="button-blue-selected">Buy</button></li>
+                    <li><button class="button-white">Sell</button></li>
+                    <li><button class="button-white">Rent</button></li>
+                </ul>
+            </div>
+
+            <!-- This form contains a combination of inputs,buttons, links, text elements -->
+            <section class="main-booking">
+
+                <form>
+                    <fieldset class="form-top">
+                        <div class="grey-font">
+                            <label for="cityname">City/Street</label>&emsp;&emsp;&emsp;&emsp;
+                            <label for="apartmenttype">Apartment type</label>&emsp;&emsp;
+                            <label for="pricerange">Price Range</label>&emsp;&emsp;<br />
+                        </div>
+
+                        <!-- this div contains the form input elements -->
+                        <div class="form-inputs">
+                            <input type="text" class="cityname-form" name="cityname" placeholder="Enter City"
+                                required="required" pattern="[A-Za-z]+">
+
+                            <!-- dropdown for apartment type -->
+                            <select name="apartmenttype" id="apartmenttype" required>
+                                <option value="Deluxe Portion">Deluxe Portion</option>
+                                <option value="The Studio">The Studio</option>
+                                <option value="Penthouse">Penthouse</option>
+                            </select>
+
+                            <!-- dropdown to select the price range -->
+                            <select name="pricerange" id="pricerange" required>
+                                <option value="none" selected disabled hidden>Min Price - Max Price
+                                <option value="Deluxe Portion">1000-10,000</option>
+                                <option value="The Studio">10,001-50,000</option>
+                                <option value="Penthouse">50,001-150,000</option>
+                            </select>
+
+                            <a href="#">+Advanced Search</a>
+                            <input class="search-btn" type="submit" value="Search">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- This is the About section where we can select an apartment type -->
+    <section class="about-section" id="about-section">
+        <!-- contains the title heading of this section -->
+        <div class="about-description-text-block">
+            <h1 class="about-description">Hi, What do you want your</h1>
+            <h2 class="location">Dream Apartment</h2>
+            <h3 class="about-description-text">Select an apartment type below to begin</h2>
+        </div>
+
+        <!-- this is code for the each apartment type that contains an image 
+        and the title of the apartment type -->
+        <!-- First box of the apartment type - Deluxe Portion  -->
+        <ul>
+            <li>
+                <div class="about-section-list">
+                    <div class="about-image">
+                        <img class="about-img" src="assignment_2_assets/about-image1.png" alt="abt-img">
+                        <!-- contains the title and radio button -->
+                        <div class="apartments-details-type">
+                            <p class="grey-font">Deluxe Portion
+                                <input type="radio" id="Deluxe Portion" name="apartmentType" value="Deluxe Portion">
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+            <!-- Second box of the apartment type - Double Height -->
+            <li>
+                <div class="about-section-list">
+                    <div class="about-image">
+                        <img class="about-img" src="assignment_2_assets/about-image2.png" alt="abt-img">
+                        <!-- contains the title and radio button -->
+                        <div class="apartments-details-type">
+                            <p class="grey-font">Double Height
+                                <input type="radio" id="Double Height" name="apartmentType" value="Double Height">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Third box of the apartment type - Penthouse -->
+            <li>
+                <!-- <div class="about-section-list" onclick="document.getElementById('Penthouse').checked = true"> -->
+                <div class="about-section-list">
+                    <div class="about-image">
+                        <img class="about-img" src="assignment_2_assets/about-image3.png" alt="abt-img">
+                        <!-- contains the title and radio button -->
+                        <div class="apartments-details-type">
+                            <p class="grey-font">Penthouse
+                                <input type="radio" id="Penthouse" name="apartmentType" value="Penthouse">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- Fourth box of the apartment type - The Studio -->
+            <li>
+                <div class="about-section-list">
+                    <div class="about-image">
+                        <img class="about-img" src="assignment_2_assets/about-image4.png" alt="abt-img">
+                        <!-- contains the title and radio button -->
+                        <div class="apartments-details-type">
+                            <p class="grey-font">The Studio
+                                <input type="radio" id="The Studio" name="apartmentType" value="The Studio">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <script>
+            const deluxePortion = document.querySelector("input[value='Deluxe Portion']");
+            const doubleHeight = document.querySelector("input[value='Double Height']");
+            const penthouse = document.querySelector("input[value='Penthouse']");
+            const theStudio = document.querySelector("input[value='The Studio']");
+
+            const aboutSectionList = document.querySelectorAll(".about-section-list");
+            aboutSectionList[0].addEventListener("click", function () {
+                deluxePortion.checked = true;
+            });
+            aboutSectionList[1].addEventListener("click", function () {
+                doubleHeight.checked = true
+            });
+            aboutSectionList[2].addEventListener("click", function () {
+                penthouse.checked = true;
+            });
+            aboutSectionList[3].addEventListener("click", function () {
+                theStudio.checked = true;
+            });
+        </script>
+
+        <button class="about-description-continue" type="button">Continue</button>
+    </section>
+
+
+    <section class="featured-list" id="featured-list">
+        <div class="featured-apartments">
+            <h3> Featured Apartment </h3>
+        </div>
+        <div class="grid">
+            <!-- this div contains the apartment image, owner image, distance -->
+            <div class="featured-apartments-list">
+                <div class="apartments-img">
+                    <img class="apt-img" src="assignment_2_assets/Mask Group 4.png" alt="apt-img">
+                    <div><img class="owner-img" src="assignment_2_assets/profilepic-1.png" alt=""></div>
+
+                    <div class="distance">1.2 km away</div>
+                    <div class="rentorsale">FOR RENT </div>
+                </div>
+                <div>
+                    <img class="location-img" src="assignment_2_assets/location-img.png" alt="">
+                    <p class="location-img-text"> Knightsbridge</p>
+                </div>
+                <!-- description about the apartment -->
+                <p class="blue-font">$2,500</p>
+                <p class="black-font">Apartment London</p>
+                <p class="grey-font">Beautiful Huge 1 Family House in heart<br /> of Westbury Newly Renovated
+                    With
+                    New<br /> Furniture </p>
+                <!-- this div contains the more details like number of bedrooms with the image tags  -->
+                <div class="apartment-block">
+                    <ul class="apartment-block">
+                        <li>
+                            <p>2 <img src="assignment_2_assets/bed-1.png"></br> bedrooms</p>
+                        </li>
+                        <li>
+                            <p> 2 <img src="assignment_2_assets/bathtub-1.png"></br>Bathrooms </p>
+                        </li>
+                        <li>
+                            <p>1776 </br>Square Ft </p>
+                        </li>
+                    </ul>
+                    <div class="featured-imgs-block">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img1.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img2.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img3.png">
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Second featured apartment which is for sale -->
+            <!-- this div contains the apartment image, owner image, distance -->
+            <div class="featured-apartments-list">
+                <div class="apartments-img">
+                    <img class="apt-img" src="assignment_2_assets/Mask Group -1.png" alt="apt-img">
+
+                    <div><img class="owner-img" src="assignment_2_assets/profilepic-2.png" alt=""></div>
+
+                    <div class="distance">20 km away</div>
+                    <div class="rentorsale">FOR SELL </div>
+                </div>
+                <div>
+                    <img class="location-img" src="assignment_2_assets/location-img.png" alt="">
+                    <p class="location-img-text"> Belmont Gardens, Chicago</p>
+                </div>
+
+                <!-- description about the apartment -->
+                <p class="blue-font">$30000</p>
+                <p class="black-font">Studio Apartment</p>
+                <p class="grey-font">Beautiful Huge 1 Family House in heart of <br /> Westbury Newly Renovated
+                    With New<br /> Furniture </p>
+                <!-- this div contains the more details like number of bedrooms with the image tags  -->
+                <div class="apartment-block">
+                    <ul class="apartment-block">
+                        <li>
+                            <p>2 <img src="assignment_2_assets/bed-1.png"></br> bedrooms</p>
+                        </li>
+                        <li>
+                            <p> 2 <img src="assignment_2_assets/bathtub-1.png"></br>Bathrooms </p>
+                        </li>
+                        <li>
+                            <p>1776 </br>Square Ft </p>
+                        </li>
+                    </ul>
+
+                    <div class="featured-imgs-block">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img1.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img2.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img3.png">
+                    </div>
+                </div>
+            </div>
+            <!-- Third featured apartment which is for rent -->
+            <!-- this div contains the apartment image, owner image, distance -->
+            <div class="featured-apartments-list">
+                <div class="apartments-img">
+                    <img class="apt-img" src="assignment_2_assets/Mask Group -2.png" alt="apt-img">
+                    <div><img class="owner-img" src="assignment_2_assets/profilepic-3.png" alt=""></div>
+
+                    <div class="distance">5.6 km away</div>
+                    <div class="rentorsale">FOR RENT </div>
+                </div>
+                <div>
+                    <img class="location-img" src="assignment_2_assets/location-img.png" alt="">
+                    <p class="location-img-text"> Timber Yard, Birmingham City Centre, B5 </p>
+                </div>
+                <!-- description about the apartment -->
+                <p class="blue-font">$379000</p>
+                <p class="black-font">Galliard Home Apartment</p>
+                <p class="grey-font">Fabulous Duplex 2 bedroom apartment will be <br /> close to some of the
+                    best local haunts and <br /> venues the city has to offer. </p>
+                <!-- this div contains the more details like number of bedrooms with the image tags  -->
+                <div class="apartment-block">
+                    <ul class="apartment-block">
+                        <li>
+                            <p>2 <img src="assignment_2_assets/bed-1.png"></br> bedrooms</p>
+                        </li>
+                        <li>
+                            <p> 2 <img src="assignment_2_assets/bathtub-1.png"></br>Bathrooms </p>
+                        </li>
+                        <li>
+                            <p>1776 </br>Sqaure Ft </p>
+                        </li>
+                    </ul>
+
+                    <div class="featured-imgs-block">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img1.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img2.png">
+                        <img class="featured-imgs" src="assignment_2_assets/featured-img3.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- this div contains 3 dots present at the end of this section -->
+        <div class="dots">
+            <span class="light-blue"></span>
+            <span class="dark-blue"></span>
+            <span class="light-blue"></span>
+        </div>
+    </section>
+
+
+
+
+    <!-- This is the section where we can see various apartment plan option -->
+    <section class="apartment-main-plan">
+        <div class="featured-apartments">
+            <h3> Apartment Plans </h3>
+        </div>
+
+        <!-- div for the nav bar of the Apartment plan section -->
+        <div class="apartment-links-group">
+            <ul class="apartment-links-group">
+                <li><a href="#">The Studio</a></li>
+                <li><a href="#apartment-plans-list1">Deluxe Portion</a></li>
+                <li><a href="#">Penthouse</a></li>
+                <li><a href="#">Top garden</a></li>
+            </ul>
+        </div>
+
+        <!-- contains a text block and an image about the deluxe portion -->
+        <div class="apartment-plans-list1" id="apartment-plans-list1">
+            <ul class="apartment-plans-list">
+                <li>
+                    <h2> Deluxe Portion</h2>
+                    <div class="deluxe-parablock">
+                        <p>Boasting chic interiors, three private balconies and </p>
+                        <p> a remarkable terrace,this two bedroom apartment will </p>
+                        <p> epitomise complete luxury. Not only will residents </p>
+                        <p> benefit from a suberb location in the heart of Shoreditch</p>
+                    </div>
+                    <div class="apartment-plans-listdetails">
+                        <ul>
+                            <li>Total Area&emsp;&nbsp;..................................&nbsp;&emsp;2800 Sq. Ft</li>
+                            <li>Bedroom&emsp;&nbsp;...................................&emsp;&nbsp;2800 Sq. Ft</li>
+                            <li>Bathroom&emsp;&nbsp;..................................&emsp;&nbsp;2800 Sq. Ft</li>
+                            <li>Smoking/ pets  &nbsp;...............................&emsp;2800 Sq. Ft</li>
+                            <li>Lounge  &emsp;&nbsp; ....................................&emsp;&nbsp;2800 Sq. Ft</li>
+                        </ul>
+                    </div>
+                </li>
+                </li>
+                <img class="deluxe-img" src="assignment_2_assets/Image 6.png" alt="">
+
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- This is the See All apartment section -->
+    <section class="see-all-apartment" id="Contact">
+        <!-- this div contains an 3 images and a text block and a button -->
+        <div class="image-block">
+            <img class="dot-img" src="assignment_2_assets/Union 2.png">
+            <img class="image1"
+                src="assignment_2_assets/THE-SELECT-TEN----Bedroom-Apartment---Wintergarden-(Floor-33-34).png" alt="">
+            <img class="image2" src="assignment_2_assets/delux2.png">
+            <img class="image3" src="assignment_2_assets/Group 9722.png">
+            <h2 class="see-all-text-block">Buy your<br /> Dream Apartment in <br /><span class="location">Prime location
+                </span> </h2>
+            <button class="see-all-button-block" type="button">See All Apartment</button>
+        </div>
+    </section>
+
+
+    <!-- This is the footer -->
+    <footer class="white-text">
+        <section>
+            <section class="footer-details">
+                <div class="footer-logo">
+                    &nbsp;&nbsp;<img src="assignment_2_assets/Group 9739.png" alt="logo" />
+                </div>
+                <!-- this contains all the social media links -->
+                <p class="social-text">
+                    The most beautiful exclusive <br /> properties and luxury apartments
+                </p>
+                <div class="social-buttons">
+                    <a href="#">
+                        <img src="assignment_2_assets/Group 9740.png" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="assignment_2_assets/Group 9741.png" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="assignment_2_assets/Group 9742.png" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="assignment_2_assets/Group 9743.png" alt="" />
+                    </a>
+                </div>
+            </section>
+
+            <!-- this section contains some of the useful links for the customers 
+        such as about, partners and contacts-->
+            <section class="link-section">
+                <ul class="links">
+                    <li>
+                        <a href="#">
+                            Useful Links
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            Partners
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            Contacts
+                        </a>
+                    </li>
+            </section>
+
+            <!-- this contains all the more information links frequesntly asked questions, help , privacy policy etc -->
+            <section class="more-links-section">
+                <ul class="more-links">
+                    <li>
+                        <a href="#">
+                            Help?
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            Terms and Conditions
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            Policy
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            Privacy
+                        </a>
+                    </li>
+            </section>
+        </section>
+        <section class="copyright-section">
+            <br />
+            <div class="copyright">
+                <p class="copyright-text">
+                    Copyright © 2021 Modern.com
+                </p>
+            </div>
+        </section>
+
+    </footer>
+
+</body>
+
+</html>

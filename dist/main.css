@@ -1,0 +1,755 @@
+.light-blue {
+  background-color: rgb(200, 213, 229);
+}
+
+.dark-blue {
+  background-color: rgb(0, 0, 255);
+}
+
+.about-description-text-block h1 {
+  font-size: 2.1rem;
+}
+.about-description-text-block h2 {
+  font-size: 2rem;
+}
+.about-description-text-block h3 {
+  font-size: 1rem;
+}
+
+/* header file is used to set the layout with start of the web-page */
+nav {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 8em 2em 4em;
+  max-height: 2rem;
+  top: 0px;
+  position: fixed;
+  z-index: 999;
+  width: 90%;
+}
+nav .nav-logo {
+  display: inline;
+  align-items: center;
+  width: "150px";
+  height: "40px";
+}
+nav .nav-row {
+  text-decoration: none;
+  margin: 0em 2em 0em 2em;
+  justify-content: space-around;
+  display: inline;
+}
+nav .nav-row-main {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: center;
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+nav .nav-row-main > li > a {
+  text-decoration: none;
+  justify-content: space-around;
+}
+nav .nav-row-main > li {
+  padding-right: 2rem;
+}
+nav .search-icon {
+  border-style: dotted;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  padding-left: 30px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 25px;
+  margin-left: 6rem;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(33, 107, 176);
+}
+a:active {
+  color: #030d13;
+}
+
+.nav-row-main li:first-child a {
+  color: rgb(36, 140, 255);
+}
+
+.nav-row-main li:not(:first-child) a {
+  color: black;
+}
+
+.apartment-links-group li a:hover {
+  color: rgb(33, 107, 176);
+}
+
+.nav-row-main li a:hover {
+  color: rgb(36, 140, 255);
+}
+
+.notification-btn {
+  max-width: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 0px 0px;
+}
+.notification-btn:hover {
+  background-color: #051521;
+}
+.notification-btn .notification-img {
+  max-width: 40px;
+  border-radius: 20px;
+}
+
+.search-btn,
+.login-btn {
+  background-color: rgb(36, 140, 255);
+  padding: 10px 24px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+}
+.search-btn:hover, .search-btn.button-blue-selected:hover,
+.login-btn:hover,
+.login-btn.button-blue-selected:hover {
+  background-color: rgba(27, 107, 164, 0.9);
+}
+.search-btn:active,
+.login-btn:active {
+  background-color: rgb(27, 107, 164);
+}
+
+.search-btn {
+  margin-left: 1rem;
+}
+
+/* scss file that contains the  loops and functions*/
+/* to display and style the contents over the image of the Home Section*/
+/* Styling for  Home section */
+.container {
+  position: relative;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.home-image {
+  position: relative;
+  margin-left: 22em;
+  width: 68%;
+  margin-top: 5rem;
+}
+
+.text-block {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px lightgray;
+  background-color: white;
+  top: 120px;
+  left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 6.6em;
+  width: 400px;
+  height: 200px;
+}
+
+.para-block {
+  color: rgb(0, 0, 0);
+  font-weight: 550;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.lightblue-text {
+  color: rgb(36, 140, 255);
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 2.5rem;
+}
+
+.darkblue-text {
+  color: rgb(20, 108, 164);
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 2.5rem;
+}
+
+.button-blue-selected {
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 140, 255);
+}
+
+.button-white {
+  color: rgb(0, 0, 0);
+  background: none;
+}
+
+.nav-button-group, .nav-button-group + li {
+  position: absolute;
+  justify-content: center;
+  top: 140px;
+  left: 42px;
+}
+.nav-button-group > ul, .nav-button-group + li > ul {
+  border-radius: 1rem 1rem 0rem 0rem;
+  display: flex;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0em;
+  list-style-type: none;
+  background-attachment: none;
+  margin-top: 4rem;
+}
+.nav-button-group > ul > li > button, .nav-button-group + li > ul > li > button {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 2em;
+  font-size: large;
+  border: none;
+}
+.nav-button-group + li, .nav-button-group + li + li {
+  background-color: rgb(27, 107, 164);
+}
+
+.main-booking {
+  position: absolute;
+  margin-left: 8em;
+  margin-top: 5rem;
+  top: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px lightgray;
+}
+
+fieldset.form-top, fieldset.form-inputs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border: none;
+}
+
+.form-inputs {
+  color: rgb(33, 107, 176);
+}
+
+/* pseudo element */
+::placeholder {
+  color: rgb(33, 107, 176);
+}
+
+.pricerange {
+  width: 74px;
+  border: none;
+  color: rgb(33, 107, 176);
+}
+
+select#apartmenttype,
+select#pricerange {
+  border: none;
+  color: rgb(33, 107, 176);
+}
+
+input {
+  border: none;
+}
+
+.form-top a, .form-inputs a {
+  margin-left: 2rem;
+  color: rgb(33, 107, 176);
+}
+
+/* to display and style the contents of the Abou section*/
+.about-description, .location {
+  text-align: center;
+  color: rgb(20, 60, 92);
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 2rem;
+}
+
+.location {
+  color: rgb(20, 108, 164);
+}
+
+.about-description-text {
+  color: rgb(141, 139, 139);
+  font-weight: normal;
+  font-family: "Segoe UI";
+  font-size: 1rem;
+}
+
+.about-section > ul {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0em 2em 0em;
+  list-style-type: none;
+}
+.about-section .about-section-list {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px lightgray;
+  margin: 1em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+}
+.about-section .about-img {
+  max-width: 250px;
+  max-height: 150px;
+}
+.about-section .apartments-details-type {
+  margin-left: 4rem;
+}
+.about-section .grey-font {
+  color: rgb(141, 139, 139);
+  font-weight: normal;
+  font-family: "Segoe UI";
+  font-size: 1rem;
+}
+.about-section input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.apartment-plans > ul {
+  list-style-type: none;
+  justify-content: center;
+}
+.apartment-plans .grey-font {
+  color: rgb(141, 139, 139);
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 1rem;
+}
+
+.about-description-continue {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 0px;
+  border-radius: 20px;
+  background-color: rgb(27, 107, 164);
+  color: rgb(255, 255, 255);
+  position: relative;
+  margin-left: 36rem;
+  padding: 14px 102px;
+}
+
+.about-description-text-block {
+  text-align: center;
+  color: rgb(27, 107, 164);
+  margin-top: 6rem;
+}
+.about-description-text-block h1 {
+  margin-block-start: 0.01em;
+  margin-block-end: 0.01em;
+}
+.about-description-text-block h2 {
+  margin-block-start: 0.01em;
+  margin-block-end: 0.01em;
+}
+
+input[type=radio i] {
+  margin: 3px 3px 0px 40px;
+  appearance: none;
+}
+
+/* to display and style the contents about recommended apartments*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.featured-apartments {
+  text-align: center;
+  color: rgb(20, 60, 92);
+  margin-top: 8rem;
+  font-size: 2rem;
+}
+
+.featured-apartments-list {
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px lightgray;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  margin: 1rem;
+}
+
+.apartments-img {
+  position: relative;
+}
+.apartments-img p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.apt-img {
+  width: 330px;
+  height: 180px;
+}
+
+.owner-img {
+  border-radius: 60px;
+  box-shadow: 2px 2px 6px lightgray;
+  max-width: 60px;
+  max-height: 60px;
+  margin-left: 16rem;
+  margin-top: -3rem;
+}
+
+.grid {
+  margin-left: 4rem;
+  margin-right: 7rem;
+}
+
+.distance {
+  left: 1rem;
+  border-radius: 10px;
+  background-color: rgb(141, 139, 139);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  padding: 4px 4px 4px 4px;
+  top: 1rem;
+}
+
+.rentorsale {
+  right: 1rem;
+  background-color: rgb(141, 139, 139);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  padding: 4px 4px 4px 4px;
+  top: 1rem;
+  background-color: rgb(106, 232, 106);
+}
+
+.featured-imgs-block {
+  display: flex;
+  margin-left: 1.2rem;
+  margin-top: 3rem;
+}
+.featured-imgs-block img {
+  max-width: 26px;
+  max-height: 26px;
+  margin-right: 3px;
+}
+
+.blue-font {
+  color: rgb(0, 0, 255);
+  font-weight: bold;
+}
+
+.black-font {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.grey-font {
+  color: rgb(141, 139, 139);
+  font-weight: normal;
+  font-family: "Segoe UI";
+  font-size: 1rem;
+}
+
+/*styling for the Apartment Plans section */
+.apartment-block {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.apartment-block > ul {
+  background-color: rgb(245, 245, 245);
+  padding-inline-start: 0px;
+  width: 250px;
+}
+.apartment-block > li {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.apartment-links-group li a {
+  color: black;
+}
+
+.apartment-links-group li a:hover {
+  color: rgb(36, 140, 255);
+}
+
+.apartment-links-group li:nth-child(2) a {
+  color: rgb(36, 140, 255);
+}
+
+.apartment-block img {
+  width: 18px;
+  height: 20px;
+}
+
+/*  General Sibling Selector  */
+.apartments-img ~ p {
+  font-size: 1rem;
+}
+
+/* Adjacent Sibling Selector*/
+.apartments-img + p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*styling for the Apartment Plans section */
+.apartment-plans {
+  position: relative;
+}
+
+.apartment-links-group {
+  position: relative;
+  justify-content: center;
+  margin: 0em 2em;
+}
+.apartment-links-group > ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0em 2em;
+}
+
+.apartment-links-group > li > a {
+  text-decoration: none;
+}
+
+.apartment-plans-list {
+  display: flex;
+  box-shadow: 2px 2px 6px lightgray;
+  border-radius: 1rem;
+  padding: 32px 32px 32px 64px;
+  border: 32px 32px 32px 128px;
+  margin: 4rem 7rem;
+}
+.apartment-plans-list > li {
+  width: 400px;
+  height: 400px;
+  margin-right: 13rem;
+  background-color: rgb(27, 107, 164);
+  list-style-type: none;
+  border-radius: 10px;
+  color: white;
+}
+.apartment-plans-list > li > h2 {
+  margin-left: 2rem;
+}
+.apartment-plans-list > li > p {
+  margin-right: 24rem;
+  display: inline;
+  background-color: var();
+  margin-left: 2rem;
+}
+
+.deluxe-parablock {
+  margin-right: 24rem;
+  display: inline;
+  margin-left: 2rem;
+  position: relative;
+  left: 2rem;
+  font-size: 0.8rem;
+}
+
+.apartment-plans-list1 {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.apartment-plans-listdetails > ul > li {
+  list-style-type: none;
+  margin-top: 6px;
+  font-size: 0.8rem;
+}
+
+.deluxe-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.location-img {
+  max-width: 20px;
+}
+
+.location-img-text {
+  margin-top: -1.5rem;
+  margin-left: 2rem;
+  color: rgb(141, 139, 139);
+}
+
+/* css for the  3dots */
+.dots > span {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5em;
+}
+
+.dots {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* to display and style the contents in the see all apartment*/
+/* See All Apartment section */
+.see-all-apartment {
+  display: flex;
+  justify-content: center;
+}
+
+.image-block {
+  position: relative;
+}
+
+.image1 {
+  margin-left: 28rem;
+  width: 800px;
+  margin-top: -18rem;
+}
+
+.image2 {
+  position: absolute;
+  bottom: -2rem;
+  left: 40px;
+  margin-left: 22rem;
+  width: 330px;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.image3 {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  width: 100px;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-left: 28em;
+  top: 500px;
+}
+
+.dot-img {
+  margin-left: 24rem;
+  margin-top: 5rem;
+}
+
+.see-all-text-block {
+  position: absolute;
+  color: rgb(20, 60, 92);
+  top: 200px;
+  left: 40px;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.see-all-button-block {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 0px;
+  border-radius: 20px;
+  background-color: rgb(27, 107, 164);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 22rem;
+  left: 60px;
+  padding: 14px 62px;
+}
+
+.location {
+  color: rgb(20, 108, 164);
+}
+
+/* footer file is used to set the layout with end of the web-page */
+/* Footer section styling*/
+footer {
+  background-color: rgb(10, 60, 102);
+}
+
+footer > section {
+  display: flex;
+  justify-content: center;
+  margin-top: 0rem;
+}
+
+.white-text, .social-text {
+  color: rgb(255, 255, 255);
+}
+
+.footer-logo {
+  width: 150px;
+  height: "40px";
+}
+
+/* styling for the social media section */
+.social-text {
+  margin-top: 4rem;
+}
+
+/* Universal selector */
+.social-buttons * {
+  margin-bottom: 1rem;
+}
+
+/* styling for the useful links section */
+/* styling for the useful links section */
+.link-section {
+  display: inline;
+  margin-left: 10rem;
+}
+
+.links ul {
+  list-style-type: none;
+}
+.links li {
+  padding: 0.5em;
+  position: relative;
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+}
+.links li > a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+
+/* styling for the more links section */
+.more-links > li {
+  padding: 0.5em;
+  list-style-type: none;
+}
+.more-links > li > a {
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  text-decoration: none;
+}
+.more-links > ul {
+  list-style-type: none;
+}
+
+/* styling for the copyrights section */
+.copyright-section {
+  background-color: rgb(3, 48, 80);
+}
+
+.copyright-text {
+  margin-left: 6rem;
+  margin-left: -25rem;
+}
+
+/*# sourceMappingURL=main.css.map */
