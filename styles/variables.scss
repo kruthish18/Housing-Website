@@ -1,0 +1,38 @@
+// $main-blue-button: #0054a6;
+$main-blue-button: rgb(27,107,164);
+$main-blue-button-before: rgba(red($main-blue-button), green($main-blue-button), blue($main-blue-button), 0.8);
+$main-blue-button-hover: rgba(red($main-blue-button), green($main-blue-button), blue($main-blue-button), 0.9);
+
+$main-lightblue-button: rgb(200, 213, 229);
+$features-background-grey:rgb(141, 139, 139);
+$main-lightblue-text: rgb(33, 107, 176);
+$lightblue-text:rgb(36,140,256);
+$main-blue-text: rgb(20,108,164);
+$main-light-blacktext: rgb(20,60,92);
+$main-darkblue-text: rgb(0, 0, 255);
+$black-color-text:  rgb(0, 0, 0);
+$white-color-text:  rgb(255, 255, 255);
+$grey-font-text: rgb(141, 139, 139);
+$footer-background-color: rgb(10 60 102); 
+$copyright-background-color:  rgb(3, 48, 80);
+$box-shadow: 2px 2px 6px lightgray;
+$bg-white-color: rgb(255, 255, 255);
+$bg-lightgrey:rgb(245 245 245);
+$bg-color-green: rgb(106, 232, 106);
+$light-blacktext: rgb(10 10 100); 
+
+$border-radius-twenty: 20px; 
+$border-radius-ten: 10px; 
+
+$font-family: 'Open Sans', Arial, sans-serif;
+$font-family-text: 'Segoe UI';
+$font-weight-bold: bold;
+
+$text-decoration-none: none;
+$border-thickness: none;
+
+$position_abs: absolute;
+$position_rel: relative;
+
+$width: 120px;
+$height: 120px;    

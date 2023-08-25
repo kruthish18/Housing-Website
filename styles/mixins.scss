@@ -1,0 +1,43 @@
+@mixin display-justcenter(){
+    display: flex;
+    justify-content: center;
+}
+
+@mixin border-radius($thickness, $radius) {
+    border: $thickness;
+    border-radius: $radius;
+}
+
+@mixin  box-radius($thickness, $box-shadow) {
+    border-radius: $thickness;
+    box-shadow: $box-shadow;
+}
+
+@mixin text-style($black-color-text, $weight, $family, $size) {
+        color: $black-color-text;
+        font-weight: $weight;
+        font-family: $family;
+        font-size: $size;
+}
+
+@mixin display-justspace-around(){
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+@mixin distance-rent-features {
+    background-color: $features-background-grey;
+    color: $white-color-text;
+    position: $position_abs;
+    padding: 4px 4px 4px 4px;
+    top: 1rem;
+}
+
+@mixin display-justify-content($justify-content){
+    display: flex;
+    justify-content: $justify-content;
+}

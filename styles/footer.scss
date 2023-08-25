@@ -1,0 +1,86 @@
+/* Footer section styling*/
+footer {
+  background-color: $footer-background-color;
+}
+
+footer>section {
+  display: flex;
+  justify-content: center;
+  margin-top: 0rem;
+}
+
+.white-text {
+  color: $white-color-text;
+}
+
+// css for the logo present in the footer
+.footer-logo {
+  width: 150px;
+  height: multiply(4, 10);
+}
+
+/* styling for the social media section */
+// inheritance
+.social-text {
+  @extend .white-text;
+  margin-top: 4rem;
+}
+
+/* Universal selector */
+.social-buttons * {
+  margin-bottom: 1rem;
+}
+
+/* styling for the useful links section */
+/* styling for the useful links section */
+.link-section {
+  display: inline;
+  margin-left: 10rem;
+}
+
+.links {
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    padding: 0.5em;
+    position: relative;
+    color: $white-color-text;
+    list-style-type: none;
+
+    >a {
+      color: $white-color-text;
+      padding: 1em;
+      text-decoration: $text-decoration-none;
+    }
+  }
+}
+
+/* styling for the more links section */
+.more-links {
+  &>li {
+    padding: 0.5em;
+    list-style-type: none;
+
+    &>a {
+      color: $white-color-text;
+      padding: 1em;
+      text-decoration: $text-decoration-none;
+    }
+  }
+
+  &>ul {
+    list-style-type: none;
+  }
+}
+
+/* styling for the copyrights section */
+.copyright-section {
+  background-color: $copyright-background-color;
+}
+
+.copyright-text {
+  margin-left: 6rem;
+  margin-left: -25rem;
+}

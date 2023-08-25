@@ -1,0 +1,105 @@
+// styling and positioning of the about section of the website
+// usage of nested selectors, mixins and inheritance
+.about-description {
+  @include text-center;
+  @include text-style($main-light-blacktext, $font-weight-bold, $font-family-text, 2rem);
+}
+
+//inheritance
+.location {
+  @extend .about-description;
+  color: $main-blue-text;
+}
+
+.about-description-text {
+  @include text-style($grey-font-text, normal, $font-family-text, 1rem);
+}
+
+// styling for the 4 div boxes present in the section
+// nested selectors
+.about-section {
+  &>ul {
+    @include display-justcenter;
+    padding: 2em 0em 2em 0em;
+    list-style-type: none;
+  }
+
+  .about-section-list {
+    background-color: $white-color-text;
+    @include box-radius($border-radius-ten, $box-shadow);
+    margin: 1em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+  }
+
+  .about-img {
+    max-width: 250px;
+    max-height: 150px;
+  }
+
+  .apartments-details-type {
+    margin-left: 4rem;
+  }
+
+  .grey-font {
+    @include text-style($grey-font-text, normal, $font-family-text, 1rem);
+  }
+
+  // styling of the radio button - turns orange after clicking
+  input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: $border-radius-ten;
+    top: -2px;
+    left: -1px;
+    position: $position_rel;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+}
+
+.apartment-plans {
+  &>ul {
+    list-style-type: none;
+    justify-content: center;
+  }
+
+  .grey-font {
+    @include text-style($grey-font-text, $font-weight-bold, $font-family-text, 1rem);
+  }
+}
+
+// css for the continue button 
+.about-description-continue {
+  @include display-justcenter;
+  @include text-center;
+  @include border-radius(0px, $border-radius-twenty);
+  background-color: $main-blue-button;
+  color: $white-color-text;
+  position: $position_rel;
+  margin-left: 36rem;
+  padding: 14px 102px;
+}
+
+// positioning of the headings
+.about-description-text-block {
+  @include text-center;
+  color: $main-blue-button;
+  margin-top: 6rem;
+  
+  h1{
+    margin-block-start: 0.01em;
+    margin-block-end: 0.01em;
+  }
+  h2{
+    margin-block-start: 0.01em;
+    margin-block-end: 0.01em;
+  }
+}
+
+input[type="radio" i] {
+  margin: 3px 3px 0px 40px;
+  appearance: none;
+}

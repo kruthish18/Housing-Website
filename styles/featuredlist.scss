@@ -1,0 +1,240 @@
+// styling for the featured list section
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.featured-apartments {
+    @include text-center;
+    color: $main-light-blacktext;
+    margin-top: 8rem;
+    font-size: font-size(0.5);
+}
+
+.featured-apartments-list {
+    background-color: $bg-white-color;
+    @include box-radius(20px, $box-shadow);
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    margin: 1rem;
+}
+
+// positioning of the images present in the featured list div
+.apartments-img {
+    position: $position_rel;
+
+    p {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.apt-img {
+    //math operations 
+    width: $width * 2 + 90px;
+    height: $height + 60px;
+}
+
+.owner-img {
+    @include box-radius(60px, $box-shadow);
+    //math operations 
+    max-width: calc($width / 2);
+    max-height: calc($height / 2);
+    margin-left: pow(4, 2) * 1rem;
+    margin-top: -3rem;
+}
+
+.grid {
+    margin-left: 4rem;
+    margin-right: 7rem;
+}
+
+// textbox positioning on the image 
+.distance {
+    left: 1rem;
+    border-radius: $border-radius-ten;
+    @include distance-rent-features;
+}
+
+// textbox positioning on the image 
+.rentorsale {
+    right: 1rem;
+    @include distance-rent-features;
+    background-color: $bg-color-green;
+}
+
+.featured-imgs-block {
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: 3rem;
+
+    img {
+        max-width: 26px;
+        max-height: 26px;
+        margin-right: 3px;
+    }
+}
+
+// styling of the fonts present in the featured list box
+.blue-font {
+    color: $main-darkblue-text;
+    font-weight: $font-weight-bold;
+}
+
+.black-font {
+    font-family: $font-family;
+    font-weight: $font-weight-bold;
+}
+
+.grey-font {
+    @include text-style($grey-font-text, normal, $font-family-text, 1rem);
+}
+
+
+/*styling for the Apartment Plans section */
+.apartment-block {
+    @include display-justify-content(space-between);
+    list-style-type: none;
+
+    &>ul {
+        background-color: $bg-lightgrey;
+        padding-inline-start: 0px;
+        width: 250px;
+    }
+
+    &>li {
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+
+}
+
+// code to make the Deluxe Portion blue by default
+.apartment-links-group li a {
+    color: black;
+}
+
+.apartment-links-group li a:hover {
+    color: $lightblue-text;
+}
+
+.apartment-links-group li:nth-child(2) a {
+    color: $lightblue-text;
+}
+
+.apartment-block img {
+    width: 18px;
+    height: 20px;
+}
+
+/*  General Sibling Selector  */
+.apartments-img~p {
+    font-size: 1rem;
+}
+
+/* Adjacent Sibling Selector*/
+.apartments-img+p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*styling for the Apartment Plans section */
+.apartment-plans {
+    position: relative;
+}
+
+.apartment-links-group {
+    position: relative;
+    justify-content: center;
+    margin: 0em 2em;
+
+    &>ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0em 2em;
+    }
+}
+
+.apartment-links-group>li>a {
+    text-decoration: none;
+}
+
+// styling of the box and positioning of 2 images
+.apartment-plans-list {
+    display: flex;
+    box-shadow: 2px 2px 6px lightgray;
+    border-radius: 1rem;
+    padding: 32px 32px 32px 64px;
+    border: 32px 32px 32px 128px;
+    margin: 4rem 7rem;
+
+    &>li {
+        width: 400px;
+        height: 400px;
+        margin-right: 13rem;
+        background-color: $main-blue-button;
+        list-style-type: none;
+        border-radius: 10px;
+        color: white;
+
+        &>h2 {
+            margin-left: 2rem;
+        }
+
+        &>p {
+            margin-right: 24rem;
+            display: inline;
+            background-color: var();
+            margin-left: 2rem;
+        }
+    }
+}
+
+// styling of the deluxe image text block
+.deluxe-parablock {
+    margin-right: 24rem;
+    display: inline;
+    margin-left: 2rem;
+    position: relative;
+    left: 2rem;
+    font-size: font-size(0.2);
+}
+
+.apartment-plans-list1 {
+    font-family: $font-family;
+}
+
+.apartment-plans-listdetails>ul>li {
+    list-style-type: none;
+    margin-top: 6px;
+    font-size: font-size(0.2);
+}
+
+.deluxe-img {
+    max-width: total(150px, 150px, 100px);
+    max-height: 400px;
+}
+
+.location-img {
+    max-width: 20px;
+}
+
+.location-img-text {
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    color: $grey-font-text;
+}
+
+/* css for the  3dots */
+.dots>span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.dots {
+    margin-top: 2rem;
+    @include display-justcenter;
+}

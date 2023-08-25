@@ -1,0 +1,25 @@
+// including all scss files into main css file
+@import 'variables';
+@import 'common';
+@import 'mixins';
+
+/* header file is used to set the layout with start of the web-page */
+@import 'header';
+
+/* scss file that contains the  loops and functions*/
+
+
+/* to display and style the contents over the image of the Home Section*/
+@import 'home';
+
+/* to display and style the contents of the Abou section*/
+@import 'about';
+
+/* to display and style the contents about recommended apartments*/
+@import 'featuredlist';
+
+/* to display and style the contents in the see all apartment*/
+@import 'seeallapartments';
+
+/* footer file is used to set the layout with end of the web-page */
+@import 'footer';

@@ -1,0 +1,124 @@
+// styling for the navigation bar of the website
+// keeping the position of the navbar fixed 
+nav {
+    background-color: $white-color-text;
+    @include display-justify-content(space-between);
+    padding: 2em 8em 2em 4em;
+    max-height: 2rem;
+    top: 0px;
+    position: fixed;
+    z-index: 999;
+    width: 90%;
+
+    // styling for the logo present in the navbar
+    .nav-logo {
+        display: inline;
+        align-items: center;
+        width: multiply(2, 75);
+        height: multiply(4, 10);
+    }
+
+    // styling for the logo present in the navbar
+    .nav-row {
+        text-decoration: $text-decoration-none;
+        margin: 0em 2em 0em 2em;
+        justify-content: space-around;
+        display: inline;
+        &-main {
+            @include display-justify-content(space-around);
+            list-style-type: none;
+            text-align: center;
+            border-radius: 1rem 1rem 0rem 0rem;
+
+            >li>a {
+                text-decoration: $text-decoration-none;
+                justify-content: space-around;            
+            }
+
+            >li {
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    // styling for the search icon
+    .search-icon {
+        border-style: dotted;
+        border-radius: $border-radius-twenty;
+        color: $black-color-text;
+        padding-left: 30px;
+        background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+        background-size: 25px;
+        margin-left: 6rem;
+    }
+}
+
+// styling for the Main section links
+a {
+    color: $black-color-text;
+    text-decoration: $text-decoration-none;
+
+    &:hover {
+        color: $main-lightblue-text;
+    }
+
+    &:active {
+        color: darken( $main-blue-button, 33% );
+    }
+
+}
+
+// code to make the Deluxe Portion blue by default
+.nav-row-main li:first-child a {
+    color: $lightblue-text;
+}
+  
+.nav-row-main li:not(:first-child) a {
+    color: black;
+}
+
+.apartment-links-group li a:hover {
+    color: $main-lightblue-text;
+}
+
+.nav-row-main li a:active {
+    color: $main-lightblue-text;
+}
+
+
+// styling and positioning of the notification button present in the navbar
+.notification-btn {
+    max-width: 40px;
+    @include border-radius(none , $border-radius-twenty);
+    padding: 0px 0px;
+    &:hover {
+        background-color: darken( $main-blue-button, 30% );
+    }
+
+    .notification-img {
+        max-width: 40px;
+        border-radius: $border-radius-twenty;
+    }
+}
+
+// styling of the login and search buttons
+.search-btn,
+.login-btn {
+    background-color: $lightblue-text;
+    padding: 10px 24px;
+    color: $white-color-text;
+    @include border-radius($border-thickness , $border-radius-ten);
+
+    &:hover,
+    &.button-blue-selected:hover {
+        background-color: $main-blue-button-hover;
+    }
+
+    &:active {
+        background-color: $main-blue-button;
+    }
+}
+
+.search-btn {
+    margin-left: 1rem;
+}

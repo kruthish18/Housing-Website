@@ -1,0 +1,139 @@
+/* Styling for  Home section */
+.container {
+    position: relative;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+// styling for the background image
+.home-image {
+    position: relative;
+    margin-left: 22em;
+    width: 68%;
+    margin-top: 5rem;
+}
+
+// styling and positioning of the text block in the Home section 
+.text-block {
+    position: absolute;
+    background-color: $white-color-text;
+    @include box-radius($border-radius-ten, 0px 0px 3px lightgray);
+    background-color: white;
+    top: 120px;
+    left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 6.6em;
+    //calling function from common.scss
+    width: total(150px, 150px, 100px);
+    height: 200px;
+}
+
+// using mixins for the text styles of the textblock  
+.para-block {
+    @include text-style($black-color-text, 550, $font-family, 0.8rem);
+}
+
+.lightblue-text {
+    @include text-style($lightblue-text, $font-weight-bold, $font-family-text, 2.5rem);
+} 
+
+.darkblue-text {
+    @include text-style($main-blue-text, $font-weight-bold, $font-family-text, 2.5rem);
+}
+
+//styling of the buttons present in the Home section 
+.button-blue-selected {
+    color: $white-color-text;
+    background-color: $lightblue-text;
+}
+
+.button-white {
+    color: $black-color-text;
+    background: none;
+}
+
+
+// nested selectors
+.nav-button-group {
+    position: absolute;
+    justify-content: center;
+    top: 140px;
+    left: 42px;
+
+    &>ul {
+        border-radius: 1rem 1rem 0rem 0rem;
+        display: flex;
+        color: $white-color-text;
+        margin-bottom: 0em;
+        list-style-type: none;
+        background-attachment: none;
+        margin-top: 4rem;
+
+        &>li>button {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding: 0.5em 1em 0.5em 1em;
+            border-radius: 2em;
+            font-size: large;
+            border: none;
+        }
+    }
+
+    &+li {
+        @extend .nav-button-group;
+        background-color: $main-blue-button;
+    }
+}
+
+
+//styling for the form in the Home section
+.main-booking {
+    position: $position_abs;
+    margin-left: 8em;
+    margin-top: 5rem;
+    top: 350px;
+    background-color: $white-color-text;
+    @include box-radius($border-radius-ten, $box-shadow);
+}
+
+fieldset.form-top {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border: none;
+}
+
+.form-inputs {
+    @extend .form-top;
+    color: $main-lightblue-text;
+}
+
+/* pseudo element */
+::placeholder {
+    color: $main-lightblue-text;
+
+}
+
+.pricerange {
+    width: 74px;
+    border: none;
+    color: $main-lightblue-text;
+}
+
+select#apartmenttype,
+select#pricerange {
+    border: none;
+    color: $main-lightblue-text;
+}
+
+input {
+    border: none;
+}
+
+.form-top a {
+    margin-left: 2rem;
+    color: $main-lightblue-text;
+}

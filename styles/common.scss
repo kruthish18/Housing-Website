@@ -1,0 +1,66 @@
+//mixin using an if-else condition to determine the background color of the buttons
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $main-lightblue-button;
+  } @else {
+    background-color: $main-darkblue-text;
+  }
+}
+
+.light-blue {
+  @include theme-colors($light-theme: true);
+}
+
+.dark-blue {
+  @include theme-colors($light-theme: false);
+}
+
+$header-font-sizes: (2.1rem, 2rem, 1rem);
+
+//for loop to add the font size of the headings of the ABOUT section
+.about-description-text-block {
+  @for $i from 1 through 3 {
+    h#{$i} {
+      font-size: nth($header-font-sizes, $i);
+    }
+  }
+}
+
+//function to determine the sum of the inputs (uses a each loop)
+//all arguments to the function are passed as a list. This argument is known as an argument list.
+@function total($value1, $value2, $value3) {
+  $total: 0;
+  $values: $value1, $value2, $value3;
+
+  @each $value in $values {
+    $number: unit($value);
+    $total: $total + $value;
+  }
+
+  @return $total;
+}
+
+//function that uses a for loop
+@function pow($base, $exponent) {
+  $total: 1;
+
+  @for $_ from 1 through $exponent {
+    $total: $total * $base;
+  }
+
+  @return $total;
+}
+
+
+//function to multiply the given 2 numbers and calculate height/width  (uses a for loop)
+@function multiply($num1, $num2) {
+  $product: $num1 * $num2;
+  @return $product + "px";
+}
+
+// function to calculate the font-size
+@function font-size($multiplier) {
+  $initial-font-size: 4rem;
+  $font-size: $initial-font-size * $multiplier;
+  @return $font-size;
+}
