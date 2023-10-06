@@ -37,7 +37,7 @@ Main.scss contains all the import of the above mentioend scss files and includes
 
 How to run the project: The homepage of the Modern Apartment website is index.html. Html tags are present on the page. 
 
-Link: https://github.com/kruthish18/Housing-Website 
+Link: https://kruthish18.github.io/Housing-Website/
 
 credits:- 
 1) https://www.w3schools.com/
